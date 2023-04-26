@@ -14,6 +14,7 @@ namespace CalculatorUnitTest
         [TestCase(0, 1, 1)]
         [TestCase(1, 0, 1)]
         [TestCase(1, -1, 0)]
+        [TestCase(-1, -1, -2)]
         [TestCase(20, 400, 420)]
         [Test(Description = "Test for calculator's addition")]
         public void TestAdd(float numberA, float numberB, float expectedResult)
@@ -26,6 +27,7 @@ namespace CalculatorUnitTest
         [TestCase(0, 1, -1)]
         [TestCase(1, 0, 1)]
         [TestCase(1, -1, 2)]
+        [TestCase(-1, -1, 0)]
         [TestCase(20, 400, -380)]
         [Test(Description = "Test for calculator' subtraction")]
         public void TestSubtract(float numberA, float numberB, float expectedResult)
@@ -36,7 +38,8 @@ namespace CalculatorUnitTest
         [TestCase(0, 0, 0)]
         [TestCase(0, 1, 0)]
         [TestCase(1, 0, 0)]
-        [TestCase(1, -1, -1)]
+        [TestCase(-1, -1, 0)]
+        [TestCase(1, -1, 1)]
         [TestCase(20, 400, (float)0.05)]
         [Test(Description = "Test for calculator' division")]
         public void TestDivide(float numberA, float numberB, float expectedResult)
@@ -50,6 +53,7 @@ namespace CalculatorUnitTest
         [TestCase(0, 1, 0)]
         [TestCase(1, 0, 0)]
         [TestCase(1, -1, -1)]
+        [TestCase(-1, -1, 1)]
         [TestCase(20, 400, 8000)]
         [Test(Description = "Test for calculator' multiplication")]
         public void TestMultiply(float numberA, float numberB, float expectedResult)
